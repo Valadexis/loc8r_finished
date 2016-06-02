@@ -6,22 +6,22 @@ var sendJSONresponse = function(res, status, content) {
   res.json(content);
 };
 
-var theEarth = (function() {
-  var earthRadius = 6371; // km, miles is 3959
-
-  var getDistanceFromRads = function(rads) {
-    return parseFloat(rads * earthRadius);
-  };
-
-  var getRadsFromDistance = function(distance) {
-    return parseFloat(distance / earthRadius);
-  };
-
-  return {
-    getDistanceFromRads: getDistanceFromRads,
-    getRadsFromDistance: getRadsFromDistance
-  };
-})();
+// var theEarth = (function() {
+//   var earthRadius = 6371; // km, miles is 3959
+//
+//   var getDistanceFromRads = function(rads) {
+//     return parseFloat(rads * earthRadius);
+//   };
+//
+//   var getRadsFromDistance = function(distance) {
+//     return parseFloat(distance / earthRadius);
+//   };
+//
+//   return {
+//     getDistanceFromRads: getDistanceFromRads,
+//     getRadsFromDistance: getRadsFromDistance
+//   };
+// })();
 
 /* GET list of locations */
 module.exports.locationsListByDistance = function(req, res) {
